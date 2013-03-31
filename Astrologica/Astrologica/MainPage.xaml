@@ -1,0 +1,33 @@
+﻿<Page
+    x:Class="Astrologica.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Astrologica"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:cfo="using:CharmFlyoutLibrary"
+    mc:Ignorable="d">
+
+    <Grid Background="DarkRed">
+        <cfo:CharmFlyout
+           x:Name="cfoAbout"
+           Heading="About"
+           HeadingBackgroundBrush="#FF4E0000"
+           Grid.RowSpan="2">
+            <StackPanel x:Name="cfoAboutPanel">
+                <TextBlock x:Name="cfoLine1" TextWrapping="Wrap" FontSize="16">Astrologica.</TextBlock>
+                <TextBlock x:Name="cfoBlank1" />
+                <TextBlock x:Name="cfoLine2" TextWrapping="Wrap" FontSize="16">Daily horoscopes brought right to your windows 8 desktop.</TextBlock>
+
+            </StackPanel>
+        </cfo:CharmFlyout>
+        <StackPanel Orientation="Vertical">
+            <TextBlock Text="Astrologica" Style="{StaticResource PageHeaderTextStyle}" Margin="50"></TextBlock>
+            <TextBlock Text="Select your Star:" Style="{StaticResource PageHeaderTextStyle}" Margin="50,0,37,0" TextWrapping="Wrap"></TextBlock>
+            <ComboBox x:Name="CmbStars" Margin="50,50,0,50" Width="242" HorizontalAlignment="Left" FontSize="29">
+                
+            </ComboBox>
+            <TextBlock x:Name="TxtResult" Margin="50,0,37,0" Style="{StaticResource PageHeaderTextStyle}" TextWrapping="Wrap" Height="437"></TextBlock>
+        </StackPanel>
+       
+    </Grid>
+</Page>
